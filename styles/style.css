@@ -1,0 +1,163 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+.header{
+    height: 135px;
+    background-color: rgb(43, 45, 46);
+    width: 100%;
+}
+.wrapper{
+    width: 70%;
+    margin: 0 auto;
+}
+.head-menu{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 55px;
+}
+.left-col{
+    font-family: "PtSans";
+    font-size: 20px;
+    font-style: italic;
+    color: #3ed1c1;
+}
+.right-col{
+    font-size: 22px;
+    font-family: "Roboto";
+    color: #eee;
+}
+.main{
+    background-image: url(../img/header.jpg);
+    background-size: cover;
+    height: 643px;
+    background-position: top center;
+    position: relative;
+}
+
+.desc{
+    position: absolute;
+    min-width: 710px;
+    background: rgba(255, 255, 255, 0.7);
+    padding: 45px;
+
+    top: 50%;  
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+}
+.slogan{
+    color: rgb(0, 122, 135);
+    font-size: 36px;
+    font-family: "Roboto", Arial, Helvetica, sans-serif;
+    font-weight: 700;
+    text-align: center;
+}
+.slogan-inner{
+    color: #4a4a4a;
+    text-align: center;
+    margin-top: 15px;
+    font-size: 20px;
+    font-weight: 500;
+}
+.about{
+    padding-top: 30px;
+    
+    font: 18px/26px "Roboto", Arial, Helvetica, sans-serif;
+}
+p{
+    color: black;
+}
+
+.gallery{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 70%;
+    margin: 0 auto;
+}
+img{
+    display: block;
+    margin: 0 auto;
+    width: 600px;
+    margin: 20px;
+    border-radius: 8px;
+    border: 2px solid black;
+}
+.about>.wrapper{
+    background: #ebeaea;
+    padding: 17px;
+    border-radius: 8px;
+}
+.contacts-block{
+    background: #eee;
+    padding: 2rem 0;
+    
+    
+}
+.contacts{
+    background: white;
+    max-width: 330px;
+    text-align: left;
+    padding: 30px 35px;
+    text-align: center;
+    margin: 0 auto;
+    border-radius: 5px;
+    line-height: 1.5rem;
+}
+
+
+
+@media only screen and (max-width: 1850px){
+    img{
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 1000px){
+    .desc{
+        min-width: 500px;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    
+    .right-col{
+        font-size: 17px;
+        margin-top: 5px;
+    }
+    .head-menu{
+        display: block;
+        text-align: center;
+        padding-top: 38px;
+    }
+    .desc{
+        min-width: 300px;
+    }
+    .slogan{
+        font-size: 25px;
+    }
+    .slogan-inner{
+        font-size: 15px;
+    }
+    .gallery{
+        width: 100%;
+    }
+    .contacts{
+        max-width: 90%;
+        padding: 10px;
+    }
+}
+.footer{
+    width: 100%;
+    background: #313131;
+    height: 30px;
+}
+
+
+
+
+
