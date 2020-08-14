@@ -5,9 +5,13 @@
     <title>Bulgaria flats</title>
     <link rel="stylesheet" href="styles/style.css">
 
-    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Merriweather:400,900,900i" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 </head>
 <body>
+    <a id="button"></a>
+
     <div class="header">
         <div  class="wrapper">
             <div class="head-menu">
@@ -29,7 +33,10 @@
 
     <div class="about">
         <div class="wrapper" style="color: black;">
-            Апартаменты Aivazovsky Park расположены в городе Поморие, в 300 м от центрального пляжа Поморие. К услугам гостей сад, бесплатный WiFi и кухня.<br><br>
+            Апартаменты Aivazovsky Park расположены в городе Поморие, в 300 м от центрального пляжа Поморие.
+            (<a style="color: royalblue;" href="https://goo.gl/maps/4cLPQSXFKfrL6NaB6" target="_blank">Смотреть на карте</a>)
+            <br>
+            К услугам гостей сад, бесплатный WiFi и кухня.<br><br>
             В числе удобств всех апартаментов терраса, кондиционер, обеденная зона и гостиный уголок с телевизором с плоским экраном и кабельными каналами. В распоряжении гостей микроволновая печь, холодильник, плита и чайник.<br><br>
             На территории обустроена детская игровая площадка.<br><br>
             Рядом с апартаментами находится Восточный пляж Поморие, автобусный вокзал Поморие и Музей соли. Расстояние до аэропорта Бургаса составляет 11 км.<br>
@@ -37,12 +44,13 @@
     </div>
     
     <div class="gallery">
-        <img src="img/1.jpg" alt="rthr">
-        <img src="img/2.jpg" alt="erthr">
-        <img src="img/3.jpg" alt="erthreh">
-        <img src="img/4.jpg" alt="erth">
-        <img src="img/5.jpg" alt="erth">
-        <img src="img/6.jpg" alt="erth">
+        <img class="images" src="img/1.jpg" alt="img">
+        <img class="images" src="img/2.jpg" alt="img">
+        <img class="images" src="img/3.jpg" alt="img">
+        <img class="images" src="img/4.jpg" alt="img">
+        <img class="images" src="img/5.jpg" alt="img">
+        <img class="images" src="img/6.jpg" alt="img">
+        
     </div>
     
     <!--<div id="map"></div>  
@@ -58,11 +66,17 @@
             // The marker, positioned at Uluru
             var marker = new google.maps.Marker({position: uluru, map: map});
             }
-    </script>
+        </script>
+
     <script async defer
         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCjMVvAn3w-TSPM6ZWihKyHNGiSMmRbUTY&callback=initMap">
     </script>-->
-    
+    <a href="https://goo.gl/maps/4cLPQSXFKfrL6NaB6" target="_blank">
+        <div class="map">
+            <img src="./img/map.PNG" alt="map">
+        </div>
+    </a>
+
     <div class="contacts-block">
             <div class="contacts">
                 <p>
@@ -77,5 +91,22 @@
     </div>
 
     <div class="footer"></div>
+
+    <script>
+        var btn = $('#button');
+
+$(window).scroll(function() {
+  if ($(window).scrollTop() > 1000) {
+    btn.addClass('show');
+  } else {
+    btn.removeClass('show');
+  }
+});
+
+btn.on('click', function(e) {
+  e.preventDefault();
+  $('html, body').animate({scrollTop:0}, '1000');
+});
+    </script>
 </body>
 </html>
